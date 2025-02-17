@@ -160,8 +160,8 @@ export const Counter = () => {
   };
 
   return (
-    <CardContent className="relative bg-blue-300 rounded-xl px-8 py-4 flex flex-col gap-4 items-center overflow-hidden">
-      <h1 className="text-4xl font-bold text-center sm:text-left">
+    <CardContent className="relative bg-blue-900 rounded-[25px] shadow-none px-8 py-4 flex flex-col gap-4 items-center overflow-hidden">
+      <h1 className="text-4xl font-bold text-center sm:text-left text-white">
         OniMizu&apos;s Siodło Counter
       </h1>
       <Image
@@ -173,15 +173,15 @@ export const Counter = () => {
       />
       <div className="flex flex-row gap-8">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-xl font-bold">Siodła zrobione dzisiaj:</h1>
-          <p className="text-3xl font-bold">{zrobione}</p>
+          <h1 className="text-xl font-bold text-white">Siodła zrobione dzisiaj:</h1>
+          <p className="text-3xl font-bold text-white">{zrobione}</p>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-xl font-bold">Siodła do wykonania:</h1>
+          <h1 className="text-xl font-bold text-white">Siodła do wykonania:</h1>
           {loading ? (
-            <p className="text-3xl font-bold">?</p>
+            <p className="text-3xl font-bold text-white">?</p>
           ) : (
-            <p className="text-3xl font-bold">{siodla}</p>
+            <p className="text-3xl font-bold text-white">{siodla}</p>
           )}
         </div>
       </div>
@@ -290,10 +290,10 @@ export const Counter = () => {
         {/* Addition Card */}
         <Card>
           <CardContent className="flex flex-col gap-2 items-center">
-            <h1 className="mt-2 font-bold">A DONATE BYŁ?</h1>
+            <h1 className="mt-2 font-bold">ILE SIODEŁ DODAĆ?</h1>
             <div className="flex flex-wrap gap-2 justify-evenly">
               <Button
-                className="bg-green-700 hover:bg-green-600"
+                className="bg-violet-700 hover:bg-violet-600"
                 onClick={() => adjustSiodla(10, "/static/images/wow.png")}
                 disabled={functionsDisabled}
               >
@@ -306,7 +306,7 @@ export const Counter = () => {
                 +10
               </Button>
               <Button
-                className="bg-green-700 hover:bg-green-600"
+                className="bg-violet-700 hover:bg-violet-600"
                 onClick={() => adjustSiodla(20, "/static/images/mad.png")}
                 disabled={functionsDisabled}
               >
@@ -319,7 +319,7 @@ export const Counter = () => {
                 +20
               </Button>
               <Button
-                className="bg-green-700 hover:bg-green-600"
+                className="bg-violet-700 hover:bg-violet-600"
                 onClick={() => adjustSiodla(50, "/static/images/sad.png")}
                 disabled={functionsDisabled}
               >
@@ -332,7 +332,7 @@ export const Counter = () => {
                 +50
               </Button>
               <Button
-                className="bg-green-700 hover:bg-green-600"
+                className="bg-violet-700 hover:bg-violet-600"
                 onClick={() => adjustSiodla(100, "/static/images/huh.png")}
                 disabled={functionsDisabled}
               >
@@ -352,10 +352,10 @@ export const Counter = () => {
               value={customAdd}
               disabled={functionsDisabled}
               onChange={(e) => setCustomAdd(e.target.value)}
-              placeholder="Ile siodeł doszło? (Custom)"
+              placeholder="Ile siodeł dodać? (Custom)"
             />
             <Button
-              className="bg-green-700 hover:bg-green-600"
+              className="bg-violet-700 hover:bg-violet-600"
               onClick={() =>
                 adjustSiodla(
                   parseFloat(customAdd),
@@ -388,7 +388,7 @@ export const Counter = () => {
       <div>
       <Dialog open={dialogOpen} onOpenChange={onDialogStateChange}>
       <DialogTrigger asChild>
-        <Button disabled={!functionsDisabled} variant="outline" className="bg-emerald-800 text-white text-md hover:bg-emerald-600 hover:text-white">Odblokuj funkcje</Button>
+        <Button disabled={!functionsDisabled} variant="outline" className="bg-violet-700 text-white text-md hover:bg-violet-600 hover:text-white">Odblokuj funkcje</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] p-8">
         <DialogHeader>

@@ -29,7 +29,7 @@ export default function RootLayout({
     <CookiesProvider>
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900`}
       >
         {children}
         <Toaster/>
